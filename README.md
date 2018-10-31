@@ -18,17 +18,16 @@ This script generates automated email reports for items in /var/lib/amavis/virus
 		virtual_alias_maps = hash:${config_directory}/amavis_qmgr_transport
 		..
  
-4) Add a new entry in /etc/aliases, eg.
+4) Add a new entry in /etc/aliases for message releasing via email, eg.
 
 		..
 		# amavis-quarantine-report
 		spammgr: "|/usr/bin/python3 /opt/amavis-quarantine-report/amavis-quarantine-report.py --release"
-        	..
+		..
 
 5) Run the `newaliases` command
 
-
-6) Add a cronjob for the automated report generation via `crontab -e`
+6) Add a cronjob for the automated report generation, eg.
 
 		5 0 * * * /usr/bin/python3 /opt/amavis-quarantine-report/amavis-quarantine-report.py --send-reports >/opt/amavis-quarantine-report/report.log 
 
