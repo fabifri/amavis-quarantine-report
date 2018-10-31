@@ -2,9 +2,9 @@
 
 ## About
 
-This script generates automated email reports for items in /var/lib/amavis/virusmails/ and allows users to release items from their quarantine via email, without the need for opening an additional port or running an http server on your MDA/MTA. 
+This script generates automated email reports for quarantined items in /var/lib/amavis/virusmails/ on a per-mailbox basis and allows users to release items from their quarantine via email.
 
-Releasing of quarantined items currently works via an alias (eg. spammgr@yourdomain.com) piping all incoming mails to the python script with the `--release` parameter. The generated email reports include a release link in the form of `mailto:spammgr@yourdomain.com?subject=x-amavis-release:xxx` where xxx is the ID of the item within amavis quarantine.
+Releasing quarantined items works via an alias (eg. spammgr@yourdomain.com) by forwarding all incoming mails to the python script with the `--release` parameter. The generated email reports include a release link in the form of `mailto:spammgr@yourdomain.com?subject=x-amavis-release:xxx` where xxx is the ID of the item within amavis quarantine. This has the great advantage of not requiring an additional open port or running an http server on your MDA/MTA. 
 
 Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production ready.
 
