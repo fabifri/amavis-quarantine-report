@@ -2,7 +2,7 @@
 
 ## Credits
 
-This work was inspired by https://github.com/le1ca/spam-report, which unfortunately did not have the ability for users to release emails from quarantine.
+This work was inspired by https://github.com/le1ca/spam-report, which unfortunately did not have the ability for users to release quarantined emails.
 
 ## About
 
@@ -37,7 +37,7 @@ Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production re
 
 5) Run the `newaliases` command
 
-6) Add a cronjob for the automated report generation, eg.
+6) Add a cronjob for the automated report generation, eg. run every day 5 minutes after midnight:
 
 		5 0 * * * /usr/bin/python3 /opt/amavis-quarantine-report/amavis-quarantine-report.py --send-reports >/opt/amavis-quarantine-report/report.log 
 
@@ -47,4 +47,5 @@ Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production re
 - Fix encoding and locale issues
 - Add a better/safer way for releasing quarantined items
 - Add multi-language email templates
+- Improve logging
 - Clean-up
