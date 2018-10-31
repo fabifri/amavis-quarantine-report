@@ -1,11 +1,13 @@
 # amavis-quarantine-report
 
-This script generates automated email reports for items in /var/lib/amavis/virusmails/ and additionally allows users to retrieve items from their quarantine. Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production ready.
+## About
+
+This script generates automated email reports for items in /var/lib/amavis/virusmails/ and additionally allows users to retrieve items from their quarantine via email. Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production ready.
 
 
 ## Install
 
-1) Clone repo via git
+1) Clone the repo via git
 
 2) Create a new postfix alias maps file like the following
 
