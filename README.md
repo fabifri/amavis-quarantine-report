@@ -46,6 +46,7 @@ Tested with amavisd-new-2.10.x and postfix 3.x but currently *not* production re
 
 - Fix encoding and locale issues
 - Add a better/safer way for releasing quarantined items
+- Add some authentication mechanism for releasing items
 - Add multi-language email templates
 - Improve logging
 - Clean-up
